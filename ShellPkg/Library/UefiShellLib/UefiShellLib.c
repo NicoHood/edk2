@@ -4214,7 +4214,7 @@ ShellFileHandleReadLine(
   UINT64      OriginalFilePosition;
 
   // Check if Efi Shell is available
-  if (gEfiShellProtocol != NULL) {
+  if (gEfiShellProtocol == NULL) {
 	  return EFI_UNSUPPORTED;
   }
   
